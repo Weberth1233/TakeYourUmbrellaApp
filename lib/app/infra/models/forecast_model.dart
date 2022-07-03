@@ -1,7 +1,7 @@
 import 'package:take_your_umbrella/app/domain/entities/forecast_entity.dart';
 
 class ForecastModel {
-  final DateTime date;
+  final String date;
   final String weekday;
   final int max;
   final int min;
@@ -46,11 +46,11 @@ class ForecastModel {
 
   factory ForecastModel.fromMap(Map<String, dynamic> map) {
     return ForecastModel(
-        date: map['forecast']['date'],
-        weekday: map['forecast']['weekday'],
-        max: map['forecast']['max'],
-        min: map['forecast']['min'],
-        description: map['forecast']['description'],
-        condition: map['forecast']['condition']);
+        date: map['date'],
+        weekday: map['weekday'],
+        max: map['max'],
+        min: map['min'],
+        description: map['description'],
+        condition: map['condition']);
   }
 }

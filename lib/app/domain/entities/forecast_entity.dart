@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
 class ForecastEntity extends Equatable {
-  final DateTime date;
+  final String date;
   final String weekday;
   final int max;
   final int min;

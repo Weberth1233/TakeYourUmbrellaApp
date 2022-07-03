@@ -42,7 +42,7 @@ dev_dependencies:
   equatable : ^2.0.0
   
   dartz: ^0.10.0
-
+  geolocator: ^7.0.0
   dio: ^4.0.0
   get: ^4.3.8
   google_fonts: ^2.1.0

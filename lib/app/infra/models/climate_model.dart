@@ -3,13 +3,14 @@ import 'package:take_your_umbrella/app/domain/entities/climate_entity.dart';
 import 'forecast_model.dart';
 
 class ClimateModel {
-  final String temp;
-  final DateTime date;
+  final int temp;
+  final String date;
   final String conditionCode;
   final String description;
   final String currently;
   final String city;
-  final String humidity;
+  final String imgId;
+  final int humidity;
   final String windSpeedy;
   final String cityName;
   final List<ForecastModel> forecast;
@@ -21,6 +22,7 @@ class ClimateModel {
       required this.description,
       required this.currently,
       required this.city,
+      required this.imgId,
       required this.humidity,
       required this.windSpeedy,
       required this.cityName,
@@ -34,6 +36,7 @@ class ClimateModel {
       'description': description,
       'currently': currently,
       'city': city,
+      'imgId': imgId,
       'humidity': humidity,
       'wind_speedy': windSpeedy,
       'city_name': cityName,
@@ -49,6 +52,7 @@ class ClimateModel {
         description: entity.description,
         currently: entity.currently,
         city: entity.city,
+        imgId: entity.imgId,
         humidity: entity.humidity,
         windSpeedy: entity.windSpeedy,
         cityName: entity.cityName,
@@ -62,6 +66,7 @@ class ClimateModel {
       description: description,
       currently: currently,
       city: city,
+      imgId: imgId,
       humidity: humidity,
       windSpeedy: windSpeedy,
       cityName: cityName,
@@ -75,11 +80,12 @@ class ClimateModel {
       description: map['results']['description'],
       currently: map['results']['currently'],
       city: map['results']['city'],
+      imgId: map['results']['img_id'],
       humidity: map['results']['humidity'],
       windSpeedy: map['results']['wind_speedy'],
       cityName: map['results']['city_name'],
       forecast: List<ForecastModel>.from(
-          map['forecast']?.map((x) => ForecastModel.fromMap(x))),
+          map['results']['forecast']?.map((x) => ForecastModel.fromMap(x))),
     );
   }
 }

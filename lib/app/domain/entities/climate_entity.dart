@@ -3,13 +3,14 @@ import 'package:equatable/equatable.dart';
 import 'forecast_entity.dart';
 
 class ClimateEntity extends Equatable {
-  final String temp;
-  final DateTime date;
+  final int temp;
+  final String date;
   final String conditionCode;
   final String description;
   final String currently;
   final String city;
-  final String humidity;
+  final int humidity;
+  final String imgId;
   final String windSpeedy;
   final String cityName;
   final List<ForecastEntity> forecast;
@@ -23,6 +24,7 @@ class ClimateEntity extends Equatable {
       required this.city,
       required this.humidity,
       required this.windSpeedy,
+      required this.imgId,
       required this.cityName,
       required this.forecast});
 
@@ -37,6 +39,7 @@ class ClimateEntity extends Equatable {
         city,
         humidity,
         windSpeedy,
+        imgId,
         cityName,
         forecast,
       ];

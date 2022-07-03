@@ -22,7 +22,11 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       body: Column(
         children: [
-          Lottie.asset('assets/animations/36416-sharp-umbrella.json'),
+          SizedBox(
+              height: 400,
+              width: 400,
+              child:
+                  Lottie.asset('assets/animations/36416-sharp-umbrella.json')),
           const SizedBox(
             height: 44,
           ),

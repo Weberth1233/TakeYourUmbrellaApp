@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:take_your_umbrella/app/presentation/core/bindings/app_bindings.dart';
 import 'package:take_your_umbrella/app/presentation/core/routes/app_routes.dart';
 import 'package:take_your_umbrella/app/presentation/shared/theme/app_theme.dart';
 
@@ -13,6 +14,7 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       getPages: AppRoutes.pages,
       initialRoute: AppRoutes.initialRoute,
+      initialBinding: AppBindings(),
       theme: AppTheme.defaultTheme,
     );
   }
